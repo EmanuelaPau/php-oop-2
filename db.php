@@ -20,7 +20,7 @@ $products = [
         'image' => 'https://media.mediazs.com/bilder/5/140/97669_pla_orthosofa_grau_fg_4820_5.jpg',
         'category' => 'dog',
         'typeOfProduct' => [
-            'type' => 'Medium',
+            'type' => 'Bed',
             'size' => 'Big',
             'material' => 'Cotton'
         ],

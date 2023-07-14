@@ -12,7 +12,7 @@ class Product
     public $image;
     public $category;
 
-    public function __construct(string $name, float $price, string $description, string $image, string $category)
+    public function __construct($name, $price, $description, $image, $category)
     {
         $this->name = $name;
 

@@ -31,5 +31,17 @@ include_once __DIR__ . '/db.php';
 
 <?php var_dump($beds = new Bed('Cuccia Billy', 10, 'Questa semplice cuccia risponde alle esigenze ...', 'url', 'Cucce', 'Cuccia da esterno', 'Grande', 'legno')) ?>
 
+<?php var_dump($products[1]['name']); ?>
+
+<?php foreach ($products as $product) {
+    if ($product["typeOfProduct"]["type"] == 'Bed') {
+        var_dump($beds = new Bed($product["name"], $product["price"], $product["description"], $product["image"], $product["category"], $product["typeOfProduct"]["type"], $product["typeOfProduct"]["size"], $product["typeOfProduct"]["material"]));
+    } elseif ($product["typeOfProduct"]["type"] == 'Food') {
+        var_dump($foods = new Food($product["name"], $product["price"], $product["description"], $product["image"], $product["category"], $product["typeOfProduct"]["type"], $product["typeOfProduct"]["ingredients"], $product["typeOfProduct"]["age"]));
+    } elseif ($product["typeOfProduct"]["type"] == 'Toy') {
+        var_dump($toys = new Toy($product["name"], $product["price"], $product["description"], $product["image"], $product["category"], $product["typeOfProduct"]["type"], $product["typeOfProduct"]["material"], ));
+    }
+} ?>
+
 
 </html>
