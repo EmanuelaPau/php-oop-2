@@ -9,7 +9,6 @@ include_once __DIR__ . '/classes/Products.php';
 include_once __DIR__ . '/db.php';
 
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -32,21 +31,118 @@ include_once __DIR__ . '/db.php';
 <main>
     <div class="container">
         <div class="row">
-            <div class="card col-3 p-0" style="width: 18rem;">
-                <img class="card-img-top" src="..." alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">Nome Prodotto</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">Price: 00,00$</h6>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                        card's content.</p>
-                    <ul class="list-group list-group-flush mb-3 p-0">
-                        <li class="list-group-item">Category:<strong> dog</strong> <i></i></li>
-                        <li class="list-group-item">Dapibus ac facilisis in</li>
-                        <li class="list-group-item">Vestibulum at eros</li>
-                    </ul>
-                    <a href="#" class="btn btn-primary">Buy now</a>
-                </div>
-            </div>
+
+            <?php foreach ($products as $product): ?>
+                <?php
+                if ($product["typeOfProduct"]["type"] == 'Bed') {
+                    $beds = new Bed($product["name"], $product["price"], $product["description"], $product["image"], $product["category"], $product["typeOfProduct"]["type"], $product["typeOfProduct"]["size"], $product["typeOfProduct"]["material"]);
+                    ?>
+
+                    <div class="card col-3 p-0 m-3">
+
+                        <img class="card-img-top" src="<?php echo $beds->image ?>" alt="<?php echo $beds->name ?> image">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                <?php echo $beds->name ?>
+                            </h5>
+                            <h6 class="card-subtitle mb-2 text-muted">
+                                <?php echo $beds->price ?> $
+                            </h6>
+                            <p class="card-text">
+                                <?php echo $beds->description ?>
+                            </p>
+                            <ul class="list-group list-group-flush mb-3 p-0">
+                                <li class="list-group-item"><strong>
+                                        <?php echo $beds->category ?>
+                                    </strong> <i></i></li>
+                                <li class="list-group-item">
+                                    <?php echo $beds->type ?>
+                                </li>
+                                <li class="list-group-item">
+                                    <?php echo $beds->size ?>
+                                </li>
+                                <li class="list-group-item">
+                                    <?php echo $beds->material ?>
+                                </li>
+                            </ul>
+                            <a href="#" class="btn btn-primary">Buy now</a>
+                        </div>
+                    </div>
+
+                <?php } elseif ($product["typeOfProduct"]["type"] == 'Food') {
+                    $foods = new Food($product["name"], $product["price"], $product["description"], $product["image"], $product["category"], $product["typeOfProduct"]["type"], $product["typeOfProduct"]["ingredients"], $product["typeOfProduct"]["age"]);
+                    ?>
+                    <div class="card col-3 p-0 m-3">
+
+                        <img class="card-img-top" src="<?php echo $foods->image ?>" alt="<?php echo $foods->name ?> image">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                <?php echo $foods->name ?>
+                            </h5>
+                            <h6 class="card-subtitle mb-2 text-muted">
+                                <?php echo $foods->price ?> $
+                            </h6>
+                            <p class="card-text">
+                                <?php echo $foods->description ?>
+                            </p>
+                            <ul class="list-group list-group-flush mb-3 p-0">
+                                <li class="list-group-item"><strong>
+                                        <?php echo $foods->category ?>
+                                    </strong> <i></i></li>
+                                <li class="list-group-item">
+                                    <?php echo $foods->type ?>
+                                </li>
+                                <li class="list-group-item">
+                                    <?php echo $foods->ingredients ?>
+                                </li>
+                                <li class="list-group-item">
+                                    <?php echo $foods->age ?>
+                                </li>
+                            </ul>
+                            <a href="#" class="btn btn-primary">Buy now</a>
+                        </div>
+                    </div>
+
+
+                    <?php
+                } elseif ($product["typeOfProduct"]["type"] == 'Toy') {
+                    $toys = new Toy($product["name"], $product["price"], $product["description"], $product["image"], $product["category"], $product["typeOfProduct"]["type"], $product["typeOfProduct"]["material"], ); ?>
+
+
+                    <div class="card col-3 p-0 m-3">
+
+                        <img class="card-img-top" src="<?php echo $toys->image ?>" alt="<?php echo $toys->name ?> image">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                <?php echo $toys->name ?>
+                            </h5>
+                            <h6 class="card-subtitle mb-2 text-muted">
+                                <?php echo $toys->price ?> $
+                            </h6>
+                            <p class="card-text">
+                                <?php echo $toys->description ?>
+                            </p>
+                            <ul class="list-group list-group-flush mb-3 p-0">
+                                <li class="list-group-item"><strong>
+                                        <?php echo $toys->category ?>
+                                    </strong> <i class="<?php echo $categories[$toys->category]['icon'] ?>"></i></li>
+                                <li class="list-group-item">
+                                    <?php echo $toys->type ?>
+                                </li>
+                                <li class="list-group-item">
+                                    <?php echo $toys->material ?>
+                                </li>
+
+                            </ul>
+                            <a href="#" class="btn btn-primary">Buy now</a>
+                        </div>
+                    </div>
+
+                    <?php
+                }
+                ?>
+
+            <?php endforeach; ?>
         </div>
     </div>
 </main>

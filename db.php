@@ -29,7 +29,7 @@ $products = [
         'name' => 'Relax Folding Dog Bed',
         'price' => 28.99,
         'description' => 'Dog bed for indoors, outdoors and travel, with a metal frame and bed made from breathable and rip-resistant mesh. The bed folds down for storage, and is weather resistant and easy to keep clean.',
-        'image' => 'https://www.zooplus.com/shop/dogs/dog_beds_baskets/waterproof_beds/545179?origin=hopps&q=bed&i=5&ro=1',
+        'image' => 'https://shop-cdn-m.mediazs.com/bilder/relax/folding/dog/bed/3/400/67413_pla_hundeliege_fg_3262_3.jpg',
         'category' => 'dog',
         'typeOfProduct' => [
             'type' => 'Bed',
@@ -89,7 +89,7 @@ $products = [
         'name' => 'Applaws Pouches Cat Food in Broth Mixed Pack 12 x 70g',
         'price' => 13.49,
         'description' => 'Natural, complementary cat food in a delicious broth. This tasty wet food is rich in animal protein. It is full of flavour with no artificial preservatives and colours.',
-        'image' => 'https://www.zooplus.com/shop/cats/canned_cat_food_pouches/applaws/applaws_multipack_selection/174209?origin=hopps&q=food&i=1&ro=1&ct=Cat%7CWet%20Cat%20Food',
+        'image' => 'https://shop-cdn-m.mediazs.com/bilder/applaws/pouches/cat/food/in/broth/mixed/pack/x/g/9/400/70954_pla_applaws_pouch_in_bruehe_fisch_mix_12x70g_hs_1_1_9.jpg',
         'category' => 'cat',
         'typeOfProduct' => [
             'type' => 'Food',
@@ -135,7 +135,7 @@ $products = [
         'name' => 'Snack Roll Dog Toy',
         'price' => 5.49,
         'description' => 'Dog toy to fill with treats and dry food, also suitable for cats, 3 openings for filling with snacks, quiet game, non-hazardous material, made of plastic and silicone ',
-        'image' => 'https://www.zooplus.com/shop/dogs/dog_toys_dog_training/activity_dog_toys/snack_activity_balls/1303416?origin=hopps&q=toy&i=1&ro=1&ct=Dog',
+        'image' => 'https://shop-cdn-m.mediazs.com/bilder/snack/roll/dog/toy/5/400/177496_snack_roll_fg_8310_5.jpg',
         'category' => 'dog',
         'typeOfProduct' => [
             'type' => 'Toy',
