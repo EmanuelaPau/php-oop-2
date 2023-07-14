@@ -26,22 +26,29 @@ include_once __DIR__ . '/db.php';
 
 <body>
 </body>
-<h1>Animal Shop</h1>
-<?php var_dump($product = new Product('spazzola pippo', 10.20, 'spazzola per cani', 'url', 'cane')) ?>
-
-<?php var_dump($beds = new Bed('Cuccia Billy', 10, 'Questa semplice cuccia risponde alle esigenze ...', 'url', 'Cucce', 'Cuccia da esterno', 'Grande', 'legno')) ?>
-
-<?php var_dump($products[1]['name']); ?>
-
-<?php foreach ($products as $product) {
-    if ($product["typeOfProduct"]["type"] == 'Bed') {
-        var_dump($beds = new Bed($product["name"], $product["price"], $product["description"], $product["image"], $product["category"], $product["typeOfProduct"]["type"], $product["typeOfProduct"]["size"], $product["typeOfProduct"]["material"]));
-    } elseif ($product["typeOfProduct"]["type"] == 'Food') {
-        var_dump($foods = new Food($product["name"], $product["price"], $product["description"], $product["image"], $product["category"], $product["typeOfProduct"]["type"], $product["typeOfProduct"]["ingredients"], $product["typeOfProduct"]["age"]));
-    } elseif ($product["typeOfProduct"]["type"] == 'Toy') {
-        var_dump($toys = new Toy($product["name"], $product["price"], $product["description"], $product["image"], $product["category"], $product["typeOfProduct"]["type"], $product["typeOfProduct"]["material"], ));
-    }
-} ?>
-
+<header>
+    <h1 class="mb-5">Animal Shop</h1>
+</header>
+<main>
+    <div class="container">
+        <div class="row">
+            <div class="card col-3 p-0" style="width: 18rem;">
+                <img class="card-img-top" src="..." alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Nome Prodotto</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Price: 00,00$</h6>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                    <ul class="list-group list-group-flush mb-3 p-0">
+                        <li class="list-group-item">Category:<strong> dog</strong> <i></i></li>
+                        <li class="list-group-item">Dapibus ac facilisis in</li>
+                        <li class="list-group-item">Vestibulum at eros</li>
+                    </ul>
+                    <a href="#" class="btn btn-primary">Buy now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
 
 </html>
