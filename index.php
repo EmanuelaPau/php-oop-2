@@ -26,5 +26,6 @@ include_once __DIR__ . '/classes/Products.php';
 <body>
 </body>
 <h1>Animal Shop</h1>
+<?php var_dump($product = new Product('spazzola pippo', 10.20, 'spazzola per cani', 'url', 'cane', 'tolette')) ?>
 
 </html>
