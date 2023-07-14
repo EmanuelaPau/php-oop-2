@@ -1,6 +1,6 @@
 <?php
 class Dogs
 {
-    public static $icon = '"fa-solid fa-dog"';
+    private static $icon = '"fa-solid fa-dog"';
 }
 ?>
