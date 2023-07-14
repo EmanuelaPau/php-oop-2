@@ -6,6 +6,7 @@ Stampiamo delle card contenenti i dettagli dei prodotti, come immagine, titolo, 
 
 <?php
 include_once __DIR__ . '/classes/Products.php';
+include_once __DIR__ . '/db.php';
 
 ?>
 
@@ -26,6 +27,10 @@ include_once __DIR__ . '/classes/Products.php';
 <body>
 </body>
 <h1>Animal Shop</h1>
-<?php var_dump($product = new Product('spazzola pippo', 10.20, 'spazzola per cani', 'url', 'cane', 'tolette')) ?>
+<?php var_dump($product = new Product('spazzola pippo', 10.20, 'spazzola per cani', 'url', 'cane')) ?>
+<!-- public function __construct($name, $price, $description, $image, $category, $typeOfProduct, string $type, string $size, string $material) -->
+
+<?php var_dump($beds = new Bed('Cuccia Billy', 10, 'Questa semplice cuccia risponde alle esigenze ...', 'url', 'Cucce', 'Cuccia da esterno', 'Grande', 'legno')) ?>
+
 
 </html>

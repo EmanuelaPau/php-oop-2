@@ -2,12 +2,12 @@
 
 $products = [
     [
-        'name' => 'sphljl',
-        'price' => 'klja',
-        'description' => 'kjsakjsa',
-        'image' => 'sahla',
-        'category' => 'asjka',
-        'typeOfProduct' => 'klksalsa',
+        'name' => '',
+        'price' => '',
+        'description' => '',
+        'image' => '',
+        'category' => '',
+        'typeOfProduct' => '',
     ]
 ];
 

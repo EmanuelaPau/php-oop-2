@@ -1,5 +1,5 @@
 <?php
-class Toy
+class Toy extends Product
 {
     public $type;
     public $material;
@@ -9,6 +9,5 @@ class Toy
         $this->type = $type;
         $this->material = $material;
     }
-
 }
 ?>
