@@ -54,7 +54,7 @@ include_once __DIR__ . '/db.php';
                             <ul class="list-group list-group-flush mb-3 p-0">
                                 <li class="list-group-item"><strong>
                                         <?php echo $beds->category ?>
-                                    </strong> <i></i></li>
+                                    </strong> <i class="<?php echo $categories[$beds->category]['icon'] ?>"></i></li>
                                 <li class="list-group-item">
                                     <?php echo $beds->type ?>
                                 </li>
@@ -88,7 +88,7 @@ include_once __DIR__ . '/db.php';
                             <ul class="list-group list-group-flush mb-3 p-0">
                                 <li class="list-group-item"><strong>
                                         <?php echo $foods->category ?>
-                                    </strong> <i></i></li>
+                                    </strong> <i class="<?php echo $categories[$foods->category]['icon'] ?>"></i></li>
                                 <li class="list-group-item">
                                     <?php echo $foods->type ?>
                                 </li>
