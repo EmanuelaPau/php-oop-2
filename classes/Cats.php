@@ -1,6 +1,10 @@
 <?php
-class Cats
+class Cat
 {
-    private static $icon = '"fa-solid fa-cat"';
+    public static $icon = 'fa-solid fa-cat';
+    public function callCatIcon()
+    {
+        return self::$icon;
+    }
 }
 ?>

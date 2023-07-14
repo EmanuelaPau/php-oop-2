@@ -7,6 +7,7 @@ Stampiamo delle card contenenti i dettagli dei prodotti, come immagine, titolo, 
 <?php
 include_once __DIR__ . '/classes/Cats.php';
 include_once __DIR__ . '/classes/Dogs.php';
+
 ?>
 
 <!DOCTYPE html>
@@ -24,6 +25,10 @@ include_once __DIR__ . '/classes/Dogs.php';
 </head>
 
 <body>
+    <h1>Animals Shop</h1>
+    <?php $cats = new Cat; ?>
+    <i class='<?php echo $cats->callCatIcon() ?>'>
+    </i>
 
 </body>
 
