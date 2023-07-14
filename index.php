@@ -25,11 +25,6 @@ include_once __DIR__ . '/classes/Dogs.php';
 </head>
 
 <body>
-    <h1>Animals Shop</h1>
-    <?php $cats = new Cat; ?>
-    <i class='<?php echo $cats->callCatIcon() ?>'>
-    </i>
-
 </body>
 
 </html>

@@ -1,10 +1,12 @@
-<?php
-class Cat
+<!-- <?php
+class Animal
 {
-    public static $icon = 'fa-solid fa-cat';
-    public function callCatIcon()
+    public $icon;
+
+
+    public function callIcon()
     {
-        return self::$icon;
+        return;
     }
 }
-?>
+?> -->
