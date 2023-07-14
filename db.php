@@ -1,5 +1,16 @@
 <?php
 
+$products = [
+    [
+        $name => '',
+        $price => '',
+        $description => '',
+        $image => '',
+        $category => '',
+        $typeOfProduct => '',
+    ]
+];
+
 $categories = [
     [
         $animal => 'dog',
