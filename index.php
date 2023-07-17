@@ -1,9 +1,9 @@
 <?php
-include_once __DIR__ . '/classes/Products.php';
-include_once __DIR__ . '/classes/subclasses/Toys.php';
+include_once __DIR__ . '/classes/Product.php';
+include_once __DIR__ . '/classes/subclasses/Toy.php';
 include_once __DIR__ . '/classes/subclasses/Food.php';
-include_once __DIR__ . '/classes/subclasses/Beds.php';
-include_once __DIR__ . '/classes/db.php';
+include_once __DIR__ . '/classes/subclasses/Bed.php';
+include_once __DIR__ . '/db.php';
 
 ?>
 <!DOCTYPE html>
@@ -99,7 +99,6 @@ include_once __DIR__ . '/classes/db.php';
                             <a href="#" class="btn btn-primary">Buy now</a>
                         </div>
                     </div>
-
 
                     <?php
                 } elseif ($product["typeOfProduct"]["type"] == 'Toy') {

@@ -1,8 +1,8 @@
 <?php
 // include_once __DIR__ . '../db.php';
-include_once __DIR__ . '/subclasses/Toys.php';
-include_once __DIR__ . '/subclasses/Food.php';
-include_once __DIR__ . '/subclasses/Beds.php';
+// include_once __DIR__ . '/subclasses/Toys.php';
+// include_once __DIR__ . '/subclasses/Food.php';
+// include_once __DIR__ . '/subclasses/Beds.php';
 
 class Product
 {
