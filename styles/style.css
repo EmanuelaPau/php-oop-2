@@ -1,0 +1,28 @@
+body {
+    background-color: #f2f3f4;
+    font-family: Arial, sans-serif;
+}
+
+.free-delivery {
+    color: #828383;
+    font-size: 12px;
+    font-weight: 700;
+    font-style: italic;
+}
+
+.user-menu {
+    color: #52a31e;
+    font-size: 14px;
+    font-weight: 700;
+    background-color: white;
+    width: 100%;
+    padding: 5px;
+}
+
+.upper-nav {
+    background-color: white;
+}
+
+.bg-orange {
+    background-color: #ff7300;
+}
