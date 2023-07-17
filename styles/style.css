@@ -26,3 +26,18 @@ body {
 .bg-orange {
     background-color: #ff7300;
 }
+
+.my_title {
+    color: #52a31e;
+    font-size: 18px;
+    font-weight: 700
+}
+
+.my_txt {
+    font-size: 14px;
+}
+
+.my_infos {
+    font-size: 15px;
+    font-weight: 700;
+}

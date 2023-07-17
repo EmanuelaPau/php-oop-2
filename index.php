@@ -57,91 +57,96 @@ include_once __DIR__ . '/db.php';
     </header>
     <main>
         <div class="container">
-            <div class="row">
+            <div class="row d-flex justify-content-between ">
 
                 <?php foreach ($products as $product):
                     $newProduct = new Product($product["name"], $product["price"], $product["description"], $product["image"], $product["category"]);
 
                     ?>
 
-                    <div class="card col-3 p-0 m-3">
+                    <div class="col-12 col-md-6 col-lg-3 p-3 mb-3">
+                        <div class="card border-0">
 
-                        <img class="card-img-top" src="<?php echo $newProduct->image ?>"
-                            alt="<?php echo $newProduct->name ?> image">
-                        <div class="card-body">
-                            <h5 class="card-title">
-                                <?php echo $newProduct->name ?>
-                            </h5>
-                            <h6 class="card-subtitle mb-2 text-muted">
-                                <?php echo $newProduct->price ?> $
-                            </h6>
-                            <p class="card-text">
-                                <?php echo $newProduct->description ?>
-                            </p>
-                            <ul class="list-group list-group-flush mb-3 p-0">
-                                <?php
+                            <img class="card-img-top" src="<?php echo $newProduct->image ?>"
+                                alt="<?php echo $newProduct->name ?> image">
+                            <div class="card-body">
+                                <h5 class="card-title my_title">
+                                    <?php echo $newProduct->name ?>
+                                </h5>
+                                <h6 class="card-subtitle mb-2 text-muted my_txt">
+                                    <?php echo $newProduct->price ?> $
+                                </h6>
+                                <p class="card-text my_txt">
+                                    <?php echo $newProduct->description ?>
+                                </p>
 
-                                ?>
-                                <li class="list-group-item"><strong>
-                                        <?php
-                                        $animal = $newProduct->category;
-                                        echo $animal ?>
-                                    </strong>
+                                <ul
+                                    class="list-group list-group-flush mb-3 p-0 my_infos d-flex flex-wrap justify-content-between flex-row">
                                     <?php
-                                    if ($animal == 'dog') {
 
-                                        ?>
-                                        <i class="<?php echo $dog->icon ?>"><?php $dog->animal ?></i>
-                                    <?php } elseif ($animal == 'cat') {
-
-                                        ?>
-                                        <i class="<?php echo $cat->icon ?>"><?php $cat->animal ?></i>
-                                    <?php } ?>
-
-                                </li>
-
-                                <?php
-
-                                if ($product["typeOfProduct"]["type"] == 'Bed') {
-                                    $beds = new Bed($product["name"], $product["price"], $product["description"], $product["image"], $product["category"], $product["typeOfProduct"]["type"], $product["typeOfProduct"]["size"], $product["typeOfProduct"]["material"]);
                                     ?>
-                                    <li class="list-group-item">
-                                        <?php echo $beds->type ?>
+                                    <li class="list-group-item m-0 p-1">
+                                        <strong class="d-none d-lg-inline">
+                                            <?php
+                                            $animal = $newProduct->category;
+                                            echo $animal ?>
+                                        </strong>
+                                        <?php
+                                        if ($animal == 'dog') {
+
+                                            ?>
+                                            <i class="<?php echo $dog->icon ?>"><?php $dog->animal ?></i>
+                                        <?php } elseif ($animal == 'cat') {
+
+                                            ?>
+                                            <i class="<?php echo $cat->icon ?>"><?php $cat->animal ?></i>
+                                        <?php } ?>
+
                                     </li>
-                                    <li class="list-group-item">
-                                        <?php echo $beds->size ?>
-                                    </li>
-                                    <li class="list-group-item">
-                                        <?php echo $beds->material ?>
-                                    </li>
+
                                     <?php
-                                } elseif ($product["typeOfProduct"]["type"] == 'Food') {
-                                    $foods = new Food($product["name"], $product["price"], $product["description"], $product["image"], $product["category"], $product["typeOfProduct"]["type"], $product["typeOfProduct"]["ingredients"], $product["typeOfProduct"]["age"]); ?>
-                                    <li class="list-group-item">
-                                        <?php echo $foods->type ?>
-                                    </li>
-                                    <li class="list-group-item">
-                                        <?php echo $foods->ingredients ?>
-                                    </li>
-                                    <li class="list-group-item">
-                                        <?php echo $foods->age ?>
-                                    </li>
-                                    <?php
-                                } elseif ($product["typeOfProduct"]["type"] == 'Toy') {
-                                    $toys = new Toy($product["name"], $product["price"], $product["description"], $product["image"], $product["category"], $product["typeOfProduct"]["type"], $product["typeOfProduct"]["material"], ); ?>
-                                    <li class="list-group-item">
-                                        <?php echo $toys->type ?>
-                                    </li>
-                                    <li class="list-group-item">
-                                        <?php echo $toys->material ?>
-                                    </li>
-                                    <?php
-                                }
-                                ?>
+
+                                    if ($product["typeOfProduct"]["type"] == 'Bed') {
+                                        $beds = new Bed($product["name"], $product["price"], $product["description"], $product["image"], $product["category"], $product["typeOfProduct"]["type"], $product["typeOfProduct"]["size"], $product["typeOfProduct"]["material"]);
+                                        ?>
+                                        <li class="list-group-item p-1">
+                                            <?php echo $beds->type ?>
+                                        </li>
+                                        <li class="list-group-item p-1">
+                                            <?php echo $beds->size ?>
+                                        </li>
+                                        <li class="list-group-item p-1">
+                                            <?php echo $beds->material ?>
+                                        </li>
+                                        <?php
+                                    } elseif ($product["typeOfProduct"]["type"] == 'Food') {
+                                        $foods = new Food($product["name"], $product["price"], $product["description"], $product["image"], $product["category"], $product["typeOfProduct"]["type"], $product["typeOfProduct"]["ingredients"], $product["typeOfProduct"]["age"]); ?>
+                                        <li class="list-group-item p-1">
+                                            <?php echo $foods->type ?>
+                                        </li>
+                                        <li class="list-group-item p-1">
+                                            <?php echo $foods->ingredients ?>
+                                        </li>
+                                        <li class="list-group-item p-1">
+                                            <?php echo $foods->age ?>
+                                        </li>
+                                        <?php
+                                    } elseif ($product["typeOfProduct"]["type"] == 'Toy') {
+                                        $toys = new Toy($product["name"], $product["price"], $product["description"], $product["image"], $product["category"], $product["typeOfProduct"]["type"], $product["typeOfProduct"]["material"], ); ?>
+                                        <li class="list-group-item p-1">
+                                            <?php echo $toys->type ?>
+                                        </li>
+                                        <li class="list-group-item p-1">
+                                            <?php echo $toys->material ?>
+                                        </li>
+                                        <?php
+                                    }
+                                    ?>
 
 
-                            </ul>
-                            <a href="#" class="btn btn-primary">Buy now</a>
+                                </ul>
+                                <a href="#" class="btn btn-primary">Buy now</a>
+                            </div>
                         </div>
                     </div>
 
