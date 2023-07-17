@@ -32,6 +32,7 @@ include_once __DIR__ . '/db.php';
 
             <?php foreach ($products as $product):
                 $newProduct = new Product($product["name"], $product["price"], $product["description"], $product["image"], $product["category"]);
+
                 ?>
 
                 <div class="card col-3 p-0 m-3">
@@ -58,10 +59,57 @@ include_once __DIR__ . '/db.php';
                                     echo $animal ?>
                                 </strong>
                                 <?php
-                                if ($animal == 'cat') { ?>
-                                    <i class="<?php $cat->icon ?>"></i>
+                                if ($animal == 'dog') {
+                                    var_dump($dog);
+                                    ?>
+                                    <i class="<?php $dog->icon ?>"><?php $dog->icon ?></i>
+                                <?php } elseif ($animal == 'cat') {
+                                    var_dump($cat);
+                                    ?>
+                                    <i class="<?php $cat->icon ?>"><?php $cat->icon ?></i>
                                 <?php } ?>
+
                             </li>
+
+                            <?php
+
+                            if ($product["typeOfProduct"]["type"] == 'Bed') {
+                                $beds = new Bed($product["name"], $product["price"], $product["description"], $product["image"], $product["category"], $product["typeOfProduct"]["type"], $product["typeOfProduct"]["size"], $product["typeOfProduct"]["material"]);
+                                ?>
+                                <li class="list-group-item">
+                                    <?php echo $beds->type ?>
+                                </li>
+                                <li class="list-group-item">
+                                    <?php echo $beds->size ?>
+                                </li>
+                                <li class="list-group-item">
+                                    <?php echo $beds->material ?>
+                                </li>
+                                <?php
+                            } elseif ($product["typeOfProduct"]["type"] == 'Food') {
+                                $foods = new Food($product["name"], $product["price"], $product["description"], $product["image"], $product["category"], $product["typeOfProduct"]["type"], $product["typeOfProduct"]["ingredients"], $product["typeOfProduct"]["age"]); ?>
+                                <li class="list-group-item">
+                                    <?php echo $foods->type ?>
+                                </li>
+                                <li class="list-group-item">
+                                    <?php echo $foods->ingredients ?>
+                                </li>
+                                <li class="list-group-item">
+                                    <?php echo $foods->age ?>
+                                </li>
+                                <?php
+                            } elseif ($product["typeOfProduct"]["type"] == 'Toy') {
+                                $toys = new Toy($product["name"], $product["price"], $product["description"], $product["image"], $product["category"], $product["typeOfProduct"]["type"], $product["typeOfProduct"]["material"], ); ?>
+                                <li class="list-group-item">
+                                    <?php echo $toys->type ?>
+                                </li>
+                                <li class="list-group-item">
+                                    <?php echo $toys->material ?>
+                                </li>
+                                <?php
+                            }
+                            ?>
+
 
                         </ul>
                         <a href="#" class="btn btn-primary">Buy now</a>
