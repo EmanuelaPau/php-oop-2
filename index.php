@@ -47,6 +47,10 @@ include_once __DIR__ . '/db.php';
             <nav class="row upper-nav p-2 d-flex justify-content-between">
                 <img class="col-2 logo"
                     src="https://cdn-prod.shphdrp.ext.aws.zooplus.io/3.14.1/images/zooplus/logo/zooplus@2x.png" />
+                <div class="col-6 d-flex">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                </div>
                 <button type="button" class="btn btn-primary border-0 bg-orange col-2">Shopping Basket</button>
             </nav>
         </div>
@@ -85,13 +89,13 @@ include_once __DIR__ . '/db.php';
                                     </strong>
                                     <?php
                                     if ($animal == 'dog') {
-                                        var_dump($dog);
+
                                         ?>
-                                        <i class="<?php $dog->icon ?>"><?php $dog->icon ?></i>
+                                        <i class="<?php echo $dog->icon ?>"><?php $dog->animal ?></i>
                                     <?php } elseif ($animal == 'cat') {
-                                        var_dump($cat);
+
                                         ?>
-                                        <i class="<?php $cat->icon ?>"><?php $cat->icon ?></i>
+                                        <i class="<?php echo $cat->icon ?>"><?php $cat->animal ?></i>
                                     <?php } ?>
 
                                 </li>
