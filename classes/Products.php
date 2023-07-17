@@ -15,7 +15,6 @@ class Product
     public function __construct($name, $price, $description, $image, $category)
     {
         $this->name = $name;
-
         $this->price = $price;
         $this->description = $description;
         $this->image = $image;
